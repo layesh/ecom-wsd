@@ -1,4 +1,7 @@
 package com.wsd.ecom.repositories;
 
-public class ProductRepository {
+import com.wsd.ecom.entities.Product;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface ProductRepository extends JpaRepository<Product, Long> {
 }
