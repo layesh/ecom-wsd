@@ -18,7 +18,7 @@ public class CustomerControllerTest {
 
     @Test
     public void returnCustomerWishlist() throws Exception {
-        ResultActions resultActions = mockMvc.perform(get("rest-api/customer/1/wishlist").contentType(
+        ResultActions resultActions = mockMvc.perform(get("/rest-api/customer/1/wishlist").contentType(
                 MediaType.APPLICATION_JSON));
 
         resultActions.andExpect(MockMvcResultMatchers.status().isOk()).andExpect(MockMvcResultMatchers.
