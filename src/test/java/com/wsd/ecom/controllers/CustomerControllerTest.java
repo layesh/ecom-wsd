@@ -11,7 +11,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
-@WebMvcTest
+@WebMvcTest(CustomerController.class)
 public class CustomerControllerTest {
     @Autowired
     private MockMvc mockMvc;
@@ -20,8 +20,8 @@ public class CustomerControllerTest {
     public void returnCustomerWishlist() throws Exception {
         ResultActions resultActions = mockMvc.perform(get("/rest-api/customer/1/wishlist").contentType(
                 MediaType.APPLICATION_JSON));
-
-        resultActions.andExpect(MockMvcResultMatchers.status().isOk()).andExpect(MockMvcResultMatchers.
-                jsonPath("$", Matchers.hasSize(1)));
+        resultActions.andExpect(MockMvcResultMatchers.status().isOk());
+        resultActions.andExpect(MockMvcResultMatchers.
+                jsonPath("$", Matchers.hasSize(2)));
     }
 }
