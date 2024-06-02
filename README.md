@@ -6,3 +6,9 @@ Install Docker if already not installed. Then run the following command in the t
 ```shell
 gradlew bootRun 
 ```
+
+### Running the test cases
+Run the following command to execute test cases:
+```shell
+gradlew test 
+```
