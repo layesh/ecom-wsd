@@ -22,6 +22,10 @@ public class Wishlist {
         this.product = product;
     }
 
+    public long getId() {
+        return id;
+    }
+
     public Customer getCustomer() {
         return customer;
     }
