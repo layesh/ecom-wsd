@@ -12,9 +12,9 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 
-@WebMvcTest
+@WebMvcTest(OrderDetailController.class)
 @AutoConfigureMockMvc
-public class OrderDetailTest {
+public class OrderDetailControllerTest {
     @Autowired
     private MockMvc mockMvc;
 
