@@ -46,6 +46,14 @@ public class OrderDetail {
         this.dateUpdated = dateUpdated;
     }
 
+    public OrderDetail(Customer customer, double totalAmount, PaymentStatus paymentStatus, Instant dateCreated, Instant dateUpdated) {
+        this.customer = customer;
+        this.totalAmount = totalAmount;
+        this.paymentStatus = paymentStatus;
+        this.dateCreated = dateCreated;
+        this.dateUpdated = dateUpdated;
+    }
+
     public @NotNull Customer getCustomer() {
         return customer;
     }
